@@ -3,4 +3,4 @@ layout: misc
 title: Sobre nós
 ---
 
-Preencher.
+Nada por aqui, por enquanto.

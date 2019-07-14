@@ -3,4 +3,4 @@ layout: misc
 title: Contato
 ---
 
-Preencher.
+Nada por aqui, por enquanto.

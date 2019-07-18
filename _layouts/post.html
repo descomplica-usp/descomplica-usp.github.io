@@ -8,21 +8,25 @@ layout: default
   </h1>
 
   <span class="post-date">
+    {% comment %} Formatting was taken from http://alanwsmith.com/jekyll-liquid-date-formatting-examples {% endcomment %}
     {{ site.data.settings.post_date_prefix }}
-    {% assign d = page.date | date: "%-d"  %}
-    {{ page.date | date: "%B" }}
-    {% case d %}
-      {% when '1' or '21' or '31' %}{{ d }}st
-      {% when '2' or '22' %}{{ d }}nd
-      {% when '3' or '23' %}{{ d }}rd
-      {% else %}{{ d }}th{% endcase %},
+    {% assign m = page.date | date: "%-m" %}
+    {{ page.date | date: "%-d" }} de 
+    {% case m %}
+      {% when '1' %}janeiro
+      {% when '2' %}fevereiro
+      {% when '3' %}março
+      {% when '4' %}abril
+      {% when '5' %}maio
+      {% when '6' %}junho
+      {% when '7' %}julho
+      {% when '8' %}agosto
+      {% when '9' %}setembro
+      {% when '10' %}outubro
+      {% when '11' %}novembro
+      {% when '12' %}dezembro
+    {% endcase %} de 
     {{ page.date | date: "%Y" }}
-    by
-    {% if page.author %}
-      {{ page.author }}
-    {% else %}
-      {{ site.author }}
-    {% endif %}
   </span>
 
   {% if page.image %}
